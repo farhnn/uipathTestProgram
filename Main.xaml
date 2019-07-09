@@ -1,16 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
- xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
- xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
- xmlns:ug="clr-namespace:UiPath.GoogleVision;assembly=UiPath.GoogleVision"
- xmlns:uga="clr-namespace:UiPath.GoogleVision.Activities;assembly=UiPath.GoogleVision.Activities"
- xmlns:ui="http://schemas.uipath.com/workflow/activities"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="476.8,667.2" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ug="clr-namespace:UiPath.GoogleVision;assembly=UiPath.GoogleVision" xmlns:uga="clr-namespace:UiPath.GoogleVision.Activities;assembly=UiPath.GoogleVision.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -55,45 +43,32 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="436.8,547.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="text" />
     </Sequence.Variables>
-    <uga:GoogleVisionScope ApiKey="{x:Null}" KeyPath="{x:Null}" Password="{x:Null}" ServiceAccountEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="22686249793-n2h0crm0h73g20ju8bcjqb0di2jbc5r5.apps.googleusercontent.com" CredentialSecret="-wUt6yPD8K_XVO3mkKGfiYDK" DisplayName="Google Vision Scope" sap2010:WorkflowViewState.IdRef="GoogleVisionScope_1" KeyType="json" Services="Vision">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uga:GoogleVisionScope ApiKey="{x:Null}" KeyPath="{x:Null}" Password="{x:Null}" ServiceAccountEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="22686249793-n2h0crm0h73g20ju8bcjqb0di2jbc5r5.apps.googleusercontent.com" CredentialSecret="-wUt6yPD8K_XVO3mkKGfiYDK" DisplayName="Google Vision Scope" sap:VirtualizedContainerService.HintSize="414.4,294.4" sap2010:WorkflowViewState.IdRef="GoogleVisionScope_1" KeyType="json" Services="Vision">
       <uga:GoogleVisionScope.Body>
         <ActivityAction x:TypeArguments="ug:SimpleObjectContainer">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GoogleVisionScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <uga:AnnotateImage ImageURL="{x:Null}" AnalysisType="Unspecified" DisplayName="Annotate Image" sap2010:WorkflowViewState.IdRef="AnnotateImage_1" ImagePath="C:\Users\Administrator\Desktop\emma-watson-didn_t-always-look-like-this.jpg" MaxNumberOfResults="5" Result="[text]" />
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336.8,208" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uga:AnnotateImage ImageURL="{x:Null}" AnalysisType="Unspecified" DisplayName="Annotate Image" sap:VirtualizedContainerService.HintSize="314.4,83.2" sap2010:WorkflowViewState.IdRef="AnnotateImage_1" ImagePath="C:\Users\Administrator\Pictures\giridhar.jpg" MaxNumberOfResults="5" Result="[text]" />
           </Sequence>
         </ActivityAction>
       </uga:GoogleVisionScope.Body>
     </uga:GoogleVisionScope>
-    <ui:WriteTextFile DisplayName="Write Text File" FileName="asdasd.txt" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[text]" />
-    <sads:DebugSymbol.Symbol>dzZDOlxVc2Vyc1xBZG1pbmlzdHJhdG9yXERvY3VtZW50c1xVaVBhdGhcUmVwb1xNYWluLnhhbWwMOgNMDgIBAT4FSR0CAQZKBUqNAQIBAj7/AT6ZAgIBDj6kAT7tAQIBDUQLRhYCAQdKggFKigECAQRKPkpKAgEDRQ1FnwICAQhFiQJFjAICAQxFqAFF9QECAQtFlAJFnAICAQk=</sads:DebugSymbol.Symbol>
+    <ui:WriteTextFile DisplayName="Write Text File" FileName="asdasd.txt" sap:VirtualizedContainerService.HintSize="414.4,88" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[text]" />
   </Sequence>
-  <sap2010:WorkflowViewState.ViewStateManager>
-    <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="AnnotateImage_1" sap:VirtualizedContainerService.HintSize="314.4,83.2" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="336.8,208">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GoogleVisionScope_1" sap:VirtualizedContainerService.HintSize="414.4,294.4" />
-      <sap2010:ViewStateData Id="WriteTextFile_1" sap:VirtualizedContainerService.HintSize="414.4,88" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="436.8,547.2">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="476.8,627.2" />
-    </sap2010:ViewStateManager>
-  </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
